@@ -1,0 +1,39 @@
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #002c37;
+  color: wheat;
+  height: 96px;
+  border-radius: 24px;
+  margin: 24px;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex: 1;
+}
+
+.book-container {
+  background-color: #007784;
+  border-radius: 24px;
+  height: 600px;
+  width: 500px;
+}
+
+img {
+  height: 112px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #002c37;
+  color: wheat;
+  height: 96px;
+  border-radius: 24px;
+  margin: 24px;
+}
