@@ -17,18 +17,75 @@ main {
 }
 
 .book-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   background-color: #007784;
   border-radius: 24px;
-  height: 600px;
+  height: 620px;
   width: 500px;
 }
 
-img {
+h3 {
+  font-size: 24px;
+}
+
+.img-book {
   height: 112px;
 }
 
+.price-like-container {
+  width: 100%;
+}
+
+.likes-heart-position {
+  display: flex;
+}
+
+.price-like {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 16px;
+}
+
 .img-heart {
-  height: 24px;
+  height: 16px;
+}
+
+.table-position {
+  padding-left: 24px;
+}
+
+.comment-container {
+  float: right;
+  padding: 3px;
+  width: 100%;
+}
+
+/* design a new Scrollbar */
+.content {
+  height: 100px;
+  overflow: auto;
+  background: transparent;
+}
+
+.input-botton-position {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 40px;
+  gap: 16px;
+}
+
+::placeholder {
+  color: #00adad;
+}
+
+.img-send-button {
+  background-color: transparent;
+  height: 16px;
 }
 
 footer {
