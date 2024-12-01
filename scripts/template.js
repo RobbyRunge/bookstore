@@ -1,32 +1,32 @@
-function generateOverviewBooks(indexBooks) {
+function getTemplateBooks(indexBook, indexComment) {
   return `      
       <section class="book-container">
-        <h1 class="text-color padding">${books[indexBooks].name}</h1>
+        <h1 class="text-color padding">${books[indexBook].name}</h1>
         <div class="border"></div>
         <div class="padding"><img class="img-book" src="styles/imgs/book-307512_1280.png" alt="" /></div>
         <div class="border"></div>
         <div class="price-like-container padding">
           <div class="price-like">
-            <p class="text-color-2">${books[indexBooks].price} €</p>
+            <p class="text-color-2">${books[indexBook].price} €</p>
             <div class="likes-heart-position">
-              <p class="text-color">${books[indexBooks].likes} 
-              <button><img class="img-heart" src="./styles/imgs/red-304570_1280.png" alt="" /></button>
+              <p class="text-color">${books[indexBook].likes} 
+              <button id="like-btn"><img class="img-heart" src="./styles/imgs/heartleer.png" alt=""></button>
               </p>
             </div>
           </div>
           <div>
             <table class="text-color">
               <tr>
-                <td>Author</td>
-                <td class="table-position">${books[indexBooks].author}</td>
+                <td>Author :</td>
+                <td class="table-position">${books[indexBook].author}</td>
               </tr>
               <tr>
-                <td>Erscheinungsjahr</td>
-                <td class="table-position">${books[indexBooks].publishedYear}</td>
+                <td>Erscheinungsjahr :</td>
+                <td class="table-position">${books[indexBook].publishedYear}</td>
               </tr>
               <tr>
-                <td>Genre</td>
-                <td class="table-position">${books[indexBooks].genre}</td>
+                <td>Genre :</td>
+                <td class="table-position">${books[indexBook].genre}</td>
               </tr>
             </table>
           </div>
@@ -34,20 +34,8 @@ function generateOverviewBooks(indexBooks) {
         <div class="border"></div>
         <div class="comment-container padding">
           <div class="content padding">
-            <table>
-              <th><h2 class="text-color">Kommentare</h2></th>
-              <tr>
-                <td class="text-color">[ Roberto ]</td>
-                <td class="text-color">Geiles Buch</td>
-              </tr>
-              <tr>
-                <td class="text-color">[ Kevin ]</td>
-                <td class="text-color">Sehr gurt zum lesen, fesselt ein bis zum Schluss</td>
-              </tr>
-              <tr>
-                <td class="text-color">[ Tobias ]</td>
-                <td class="text-color">super Buch, sehr interessant</td>
-              </tr>
+            <h2 class="text-color">Kommentare</h2>
+            <table id="user-comments${indexBook}">
             </table>
           </div>
         </div>
@@ -57,4 +45,12 @@ function generateOverviewBooks(indexBooks) {
         </div>
       </section>
       <br>`
+}
+
+function getTemplateComments(indexBook ,indexComment) {
+  return `
+    <tr>
+       <td>${books[indexBook].comments[indexComment].name}</td>
+       <td>${books[indexBook].comments[indexComment].comment}</td>
+    </tr>`
 }

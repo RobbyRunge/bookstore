@@ -5,6 +5,22 @@
   padding: 0;
 }
 
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #002c37;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00f8fa;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00b0ba;
+}
+
 body {
   min-height: 100vh;
   display: flex;
