@@ -31,6 +31,7 @@ body {
 button {
   background-color: transparent;
   border: none;
+  cursor: pointer;
 }
 
 input {
@@ -39,6 +40,7 @@ input {
   color: wheat;
   border: none;
   border-bottom: solid 1px #00f8fa;
+  outline: none;
 }
 
 .text-color {

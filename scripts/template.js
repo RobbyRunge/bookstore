@@ -1,4 +1,4 @@
-function getTemplateBooks(indexBook, indexComment) {
+function getTemplateBooks(indexBook) {
   return `      
       <section class="book-container">
         <h1 class="text-color padding">${books[indexBook].name}</h1>
@@ -35,13 +35,13 @@ function getTemplateBooks(indexBook, indexComment) {
         <div class="comment-container padding">
           <div class="content padding">
             <h2 class="text-color">Kommentare</h2>
-            <table id="user-comments${indexBook}">
-            </table>
+            <table id="user-comments${indexBook}"></table>
           </div>
         </div>
         <div class="input-botton-position">
-          <input type="text" placeholder="Schreibe dein Kommentar ..." />
-          <button><img class="img-send-button" src="./styles/imgs/paper-plane-7485769_1280.png" alt="" /></button>
+          <input type="text" id="name-input${indexBook}" placeholder="Ihr Name ..." required />
+          <input type="text" id="commit-input${indexBook}" placeholder="Schreibe dein Kommentar ..." required />
+          <button onclick="addCommit(${indexBook})"><img class="img-send-button" src="./styles/imgs/paper-plane-7485769_1280.png" alt="" /></button>
         </div>
       </section>
       <br>`
@@ -50,7 +50,7 @@ function getTemplateBooks(indexBook, indexComment) {
 function getTemplateComments(indexBook ,indexComment) {
   return `
     <tr>
-       <td>${books[indexBook].comments[indexComment].name}</td>
-       <td>${books[indexBook].comments[indexComment].comment}</td>
+       <td class="padding-td-name">${books[indexBook].comments[indexComment].name}:</td>
+       <td class="padding-td-comment">${books[indexBook].comments[indexComment].comment}</td>
     </tr>`
 }

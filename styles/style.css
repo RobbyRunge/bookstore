@@ -12,7 +12,8 @@ header {
 main {
   display: flex;
   align-items: center;
-  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
   flex: 1;
 }
 
@@ -22,6 +23,7 @@ main {
   flex-direction: column;
   background-color: #007784;
   border-radius: 24px;
+  margin: 24px;
   height: 620px;
   width: 500px;
 }
@@ -50,7 +52,8 @@ h3 {
 }
 
 .img-heart {
-  height: 16px;
+  height: 24px;
+  color: #e0605a;
 }
 
 .table-position {
@@ -64,9 +67,27 @@ h3 {
 }
 
 .content {
-  height: 100px;
+  height: 140px;
   overflow: auto;
   background: transparent;
+  color: wheat;
+}
+
+table {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.padding-td-name {
+  display: flex;
+  padding-right: 8px;
+  font-weight: bold;
+}
+
+.padding-td-comment {
+  display: flex;
+  padding-top: 8px;
 }
 
 .input-botton-position {
@@ -74,7 +95,6 @@ h3 {
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin-top: 40px;
   gap: 16px;
 }
 
