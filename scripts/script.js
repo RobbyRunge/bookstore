@@ -28,13 +28,24 @@ function addCommit(indexBook) {
   let commitInputRef = document.getElementById(`commit-input${indexBook}`);
   let commitInput = commitInputRef.value;
 
-  books[indexBook].comments.push({
-    name: nameInput, 
-    comment: commitInput
-  })
+  if (nameInput == "" || commitInput == "") {
+    alert("Bitte geben Sie Ihren Namen und ein Kommentar ein")
+    return;
+  } else {
+    books[indexBook].comments.push({
+      name: nameInput, 
+      comment: commitInput
+    })
+  }
 
   nameInputRef.value = ""; 
   commitInputRef.value = ""; 
   
   renderAll();
 }
+
+// weiter führen, für wechsel des hart img beim klicken
+// function changeHeart(indexBook) {
+//   let img = document.getElementById(`change-heart${indexBook}`);
+//   let like = document.getElementById(`like-btn${indexBook}`)
+// }
