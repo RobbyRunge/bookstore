@@ -20,6 +20,8 @@ function renderComments(indexBook) {
   }
 }
 
+// function likeBook(indexBook) {
+// }
 
 function addCommit(indexBook) {
   let nameInputRef = document.getElementById(`name-input${indexBook}`); 
@@ -43,9 +45,3 @@ function addCommit(indexBook) {
   
   renderAll();
 }
-
-// weiter führen, für wechsel des hart img beim klicken
-// function changeHeart(indexBook) {
-//   let img = document.getElementById(`change-heart${indexBook}`);
-//   let like = document.getElementById(`like-btn${indexBook}`)
-// }

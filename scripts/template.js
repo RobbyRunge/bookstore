@@ -1,4 +1,7 @@
 function getTemplateBooks(indexBook) {
+  let heartImg = books[indexBook].liked 
+  ? "/styles/imgs/fullheart.png" : "/styles/imgs/emptyheart.png";
+
   return `      
       <section class="book-container">
         <h1 class="text-color padding">${books[indexBook].name}</h1>
@@ -10,7 +13,7 @@ function getTemplateBooks(indexBook) {
             <p class="text-color-2">${books[indexBook].price} €</p>
             <div class="likes-heart-position">
               <p class="text-color"><strong>${books[indexBook].likes}</strong> 
-              <button id="like-btn"><img class="img-heart" id="change-heart" src="./styles/imgs/emptyheart.png" alt=""></button>
+              <img class="img-heart" id="heart-status" onclick="likeBook()" src="${heartImg}" alt="">
               </p>
             </div>
           </div>
@@ -47,7 +50,7 @@ function getTemplateBooks(indexBook) {
       <br>`
 }
 
-function getTemplateComments(indexBook ,indexComment) {
+function getTemplateComments(indexBook, indexComment) {
   return `
     <tr>
        <td class="padding-td-name">${books[indexBook].comments[indexComment].name}:</td>
