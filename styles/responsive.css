@@ -1,0 +1,33 @@
+@media (max-width: 600px) {
+  h1 {
+    text-align: center;
+  }
+  .book-container {
+    width: 90%;
+  }
+  input {
+    width: 160px;
+  }
+}
+
+@media (max-width: 450px) {
+  h1 {
+    font: 20px;
+  }
+  h2 {
+    font: 18px;
+  }
+  td {
+    font-size: 12px;
+  }
+  input {
+    width: 80px;
+    gap: 8px;
+  }
+  .book-container {
+    height: auto;
+  }
+  .input-botton-position {
+    padding-bottom: 8px;
+  }
+}

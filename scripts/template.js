@@ -1,9 +1,9 @@
 function getTemplateBooks(indexBook) {
   let heartImg;
   if (books[indexBook].liked) {
-    heartImg = "/styles/imgs/fullheart.png";
+    heartImg = "styles/imgs/fullheart.png";
   } else {
-    heartImg = "/styles/imgs/emptyheart.png";
+    heartImg = "styles/imgs/emptyheart.png";
   }
 
   return `      
@@ -46,8 +46,8 @@ function getTemplateBooks(indexBook) {
           </div>
         </div>
         <div class="input-botton-position">
-          <input type="text" id="name-input${indexBook}" placeholder="Ihr Name ..." required />
-          <input type="text" id="commit-input${indexBook}" placeholder="Schreibe dein Kommentar ..." required />
+          <input type="text" id="name-input${indexBook}" placeholder="Name" required />
+          <input type="text" id="commit-input${indexBook}" placeholder="Kommentar" required />
           <button onclick="addCommit(${indexBook})"><img class="img-send-button" src="./styles/imgs/paper-plane.png" alt="" /></button>
         </div>
       </section>
