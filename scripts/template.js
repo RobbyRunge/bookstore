@@ -1,6 +1,10 @@
 function getTemplateBooks(indexBook) {
-  let heartImg = books[indexBook].liked 
-  ? "/styles/imgs/fullheart.png" : "/styles/imgs/emptyheart.png";
+  let heartImg;
+  if (books[indexBook].liked) {
+    heartImg = "/styles/imgs/fullheart.png";
+  } else {
+    heartImg = "/styles/imgs/emptyheart.png";
+  }
 
   return `      
       <section class="book-container">
@@ -13,7 +17,7 @@ function getTemplateBooks(indexBook) {
             <p class="text-color-2">${books[indexBook].price} €</p>
             <div class="likes-heart-position">
               <p class="text-color"><strong>${books[indexBook].likes}</strong> 
-              <img class="img-heart" id="heart-status" onclick="likeBook()" src="${heartImg}" alt="">
+              <img class="img-heart" id="heart-status" onclick="likeBook(${indexBook})" src="${heartImg}" alt="">
               </p>
             </div>
           </div>

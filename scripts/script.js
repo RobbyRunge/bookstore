@@ -1,4 +1,5 @@
-function renderAll() {
+function init() {
+  getFromLocalStorage();
   renderBooks();
 }
 
@@ -20,8 +21,20 @@ function renderComments(indexBook) {
   }
 }
 
-// function likeBook(indexBook) {
-// }
+function likeBook(indexBook) {
+  let book = books[indexBook]; 
+
+  if (book.liked) {
+    book.likes -= 1; 
+  } else {
+    book.likes += 1; 
+  }
+
+  book.liked = !book.liked;
+
+  saveToLocalStorage();
+  init();
+}
 
 function addCommit(indexBook) {
   let nameInputRef = document.getElementById(`name-input${indexBook}`); 
@@ -43,5 +56,19 @@ function addCommit(indexBook) {
   nameInputRef.value = ""; 
   commitInputRef.value = ""; 
   
-  renderAll();
+  saveToLocalStorage();
+  init();
+}
+
+function saveToLocalStorage(){
+  localStorage.setItem("books", JSON.stringify(books));
+}
+
+
+function getFromLocalStorage() {
+  let myObject = JSON.parse(localStorage.getItem("books"));
+
+  if (myObject !== null) {
+    books = myObject;
+  }
 }
