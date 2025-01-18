@@ -1,3 +1,7 @@
+/**
+ * Array of book objects containing details such as name, author, likes, and comments.
+ * @type {Array<{name: string, author: string, likes: number, liked: boolean, price: number, publishedYear: number, genre: string, comments: Array<{name: string, comment: string}>}>}
+ */
 let books = [
   {
     "name": "Die Geheimnisse des Ozeans",

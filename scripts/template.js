@@ -1,3 +1,9 @@
+/**
+ * Generates the HTML template for a book.
+ * 
+ * @param {number} indexBook - The index of the book to generate the template for.
+ * @returns {string} - The HTML string for the book template.
+ */
 function getTemplateBooks(indexBook) {
   let heartImg;
   if (books[indexBook].liked) {
@@ -51,13 +57,20 @@ function getTemplateBooks(indexBook) {
           <button onclick="addCommit(${indexBook})"><img class="img-send-button" src="./styles/imgs/paper-plane.png" alt="" /></button>
         </div>
       </section>
-      <br>`
+      <br>`;
 }
 
+/**
+ * Generates the HTML template for a comment.
+ * 
+ * @param {number} indexBook - The index of the book the comment belongs to.
+ * @param {number} indexComment - The index of the comment to generate the template for.
+ * @returns {string} - The HTML string for the comment template.
+ */
 function getTemplateComments(indexBook, indexComment) {
   return `
     <tr>
        <td class="padding-td-name">${books[indexBook].comments[indexComment].name}:</td>
        <td class="padding-td-comment">${books[indexBook].comments[indexComment].comment}</td>
-    </tr>`
-}
+    </tr>`;
+} 
